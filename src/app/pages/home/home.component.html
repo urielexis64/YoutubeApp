@@ -1,0 +1,24 @@
+<h1 class="fw-light">Youtube Videos</h1>
+<hr />
+<div class="card-columns">
+  <div class="card" *ngFor="let video of videos">
+    <img [src]="video.thumbnails | thumbnail" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ video.title }}</h5>
+      <p class="card-text">
+        {{ video.description | slice: 0:80 }}<small>...</small>
+      </p>
+      <strong>Published by: {{ video.channelTitle }}</strong>
+      <small class="text-muted">Date: {{ video.publishedAt | date }}</small>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-danger btn-block">See video</button>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-5 mb-5 text-center">
+  <div class="col">
+    <button class="btn btn-primary btn-lg">Next</button>
+  </div>
+</div>
