@@ -1,0 +1,9 @@
+.card-columns {
+  column-count: 4;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
